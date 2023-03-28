@@ -29,6 +29,13 @@ void Squr(int a, int b) {
     }
     cout << result << endl;
 }
+void Fact(int a, int b) {
+    int result = 1;
+    for (int i = 1; i < b + 1; i++) {
+        result = result * i;
+    }
+    cout << result << endl;
+}
 int main()
 {
     int a = 0;
@@ -38,7 +45,7 @@ int main()
     cout << " A _ B 계산기" << endl;
 
     while (true) {
-        cout << "하고 싶은 연산 입력('+', '-', '/', '*', '%', '^' 끝내고 싶으면 'E' 입력) : ";
+        cout << "하고 싶은 연산 입력('+', '-', '/', '*', '%', '^', '!' 끝내고 싶으면 'E' 입력) : ";
         cin >> op;
         if (op == 'E') {
             break;
@@ -66,6 +73,8 @@ int main()
         case '^':
             Squr(a, b);
             break;
+        case '!':
+            Fact(a, b);
         }
     }
 

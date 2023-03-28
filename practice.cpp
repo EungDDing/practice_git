@@ -22,6 +22,13 @@ void Rem(int a, int b) {
     int result = a % b;
     cout << result << endl;
 }
+void Squr(int a, int b) {
+    int result = a;
+    for (int i = 1; i < b; i++) {
+        result = result * a;
+    }
+    cout << result << endl;
+}
 int main()
 {
     int a = 0;
@@ -31,7 +38,7 @@ int main()
     cout << " A _ B 계산기" << endl;
 
     while (true) {
-        cout << "하고 싶은 연산 입력('+', '-', '/', '*', '%' 끝내고 싶으면 'E' 입력) : ";
+        cout << "하고 싶은 연산 입력('+', '-', '/', '*', '%', '^' 끝내고 싶으면 'E' 입력) : ";
         cin >> op;
         if (op == 'E') {
             break;
@@ -55,6 +62,9 @@ int main()
             break;
         case '%':
             Rem(a, b);
+            break;
+        case '^':
+            Squr(a, b);
             break;
         }
     }

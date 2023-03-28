@@ -18,6 +18,10 @@ void Mul(int a, int b) {
     int result = a * b;
     cout << result << endl;
 }
+void Rem(int a, int b) {
+    int result = a % b;
+    cout << result << endl;
+}
 int main()
 {
     int a = 0;
@@ -27,7 +31,7 @@ int main()
     cout << " A _ B 계산기" << endl;
 
     while (true) {
-        cout << "하고 싶은 연산 입력('+', '-', '/', '*' 끝내고 싶으면 'E' 입력) : ";
+        cout << "하고 싶은 연산 입력('+', '-', '/', '*', '%' 끝내고 싶으면 'E' 입력) : ";
         cin >> op;
         if (op == 'E') {
             break;
@@ -48,6 +52,9 @@ int main()
             break;
         case '*':
             Mul(a, b);
+            break;
+        case '%':
+            Rem(a, b);
             break;
         }
     }
